@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "my_mat.h" 
 
 void shortestPath_mat(int mat[10][10]){
         for(int u=0;u<10;u++){
@@ -31,5 +32,9 @@ void funcB(int mat [10][10],int i,int j){
 }
 
 void funcC(int mat [10][10],int i,int j){
-
+    if(mat[i][j]!=0){
+        printf("%d",mat[i][j]);
+    }else{
+        printf("-1");
+    }
 }
