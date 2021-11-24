@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include "my_mat.h"
 
 int main(){
     int select;
-    scanf("%d",  select);
+    scanf("%d",  &select);
     while(select!='D'){
         if(select=='A'){
             funcA();
