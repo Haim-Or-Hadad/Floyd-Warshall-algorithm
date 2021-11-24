@@ -13,6 +13,7 @@ my_mat.o: my_mat.c my_mat.h
 
 my_mat.a: my_mat.o 
 	ar -rcs my_mat.a my_mat.o 
+	ranlib my_mat.a
 
 all: connections
 
