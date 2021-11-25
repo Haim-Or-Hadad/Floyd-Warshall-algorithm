@@ -2,7 +2,7 @@
 #include "my_mat.h"
 
 int main(){
-    int select;
+    char select;
     scanf("%c",  &select);
     while(select!='D'){
         if(select=='A'){
