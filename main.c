@@ -16,4 +16,6 @@ int main(){
         }
         scanf("%d",&select);
     }
+    
+    return 0;
 }
