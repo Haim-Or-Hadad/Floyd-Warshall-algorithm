@@ -17,7 +17,7 @@ my_mat.a: my_mat.o
 
 all: connections
 
-.PHONY: clean
+.PHONY: clean all
 
 clean: 
 	rm -f *o *a connections
