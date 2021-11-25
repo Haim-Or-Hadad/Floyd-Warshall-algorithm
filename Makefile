@@ -20,4 +20,3 @@ my_mat.a: my_mat.o
 
 clean: 
 	rm -f *o *a connections
-
