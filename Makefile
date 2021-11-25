@@ -14,7 +14,8 @@ my_mat.o: my_mat.c my_mat.h
 	$(CC)	$(FLAGS) -c my_mat.c 
 
 my_mat.a: my_mat.o 
-	ar -rcs my_mat.a my_mat.o 
+	ar -rcs my_mat.a my_mat.o
+	ranlib my_mat.a
 
 .PHONY: clean all
 
