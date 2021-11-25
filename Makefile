@@ -1,24 +1,23 @@
-FLAGS=-Wall -g
-CC=gcc
+.PHONY: clean all
 
+CC = gcc
+AR = ar -rcs
+FLAGS = -Wall -g
 
-connections: main.o my_mat.a
-	$(CC) $(FLAGS) -o connections main.o my_mat.a
+main.o: main.c
+	$(CC) $(FLAGS) -c main.c
 
-main.o: main.c my_mat.h
-	$(CC) $(FLAGS) -c main.c 
+my_mat.o: my_mat.c
+	$(CC) $(FLAGS) -c my_mat.c
 
-my_mat.o: my_mat.c my_mat.h
-	$(CC)	$(FLAGS) -c my_mat.c 
-
-my_mat.a: my_mat.o 
-	ar -rcs my_mat.a my_mat.o 
+my_mat.a: my_mat.o
+	$(AR) my_mat.a my_mat.o
 	ranlib my_mat.a
+
+connections: my_mat.a main.o 
+	$(CC) $(FLAGS) main.o my_mat.a -o connections -lm
 
 all: connections
 
-.PHONY: clean all
-
 clean: 
-	rm -f *o *a connections
-
+	rm -f *.a *.o connections
