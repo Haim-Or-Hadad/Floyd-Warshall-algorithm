@@ -17,11 +17,13 @@ void shortestPath_mat(){
 
 
 void funcA(){
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 10; i++){
         for (int j = 0; j < 10; j++)
         {
             scanf("%d",&mat[i][j]);
         }
+    }
+    shortestPath_mat();
 }
 
 
@@ -30,19 +32,19 @@ void funcB(){
     int i , j;
     scanf("%d %d",&i,&j);
     if(mat[i][j]!=0){
-        printf("True");
+        printf("True\n");
     }
     else 
-        printf("False");
+        printf("False\n");
 }
 
 void funcC(){
     int i,j;
     scanf("%d %d", &i, &j);
     if(mat[i][j]!=0){
-        printf("%d",mat[i][j]);
+        printf("%d\n",mat[i][j]);
     }
     else{
-        printf("-1");
+        printf("-1\n");
         }
 }
