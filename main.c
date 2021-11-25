@@ -3,7 +3,7 @@
 
 int main(){
     int select;
-    scanf("%d",  &select);
+    scanf("%c",  &select);
     while(select!='D'){
         if(select=='A'){
             funcA();
@@ -14,7 +14,7 @@ int main(){
         else if(select=='C'){
             funcC();
         }
-        scanf("%d",&select);
+        scanf("%c",&select);
     }
     
     return 0;
