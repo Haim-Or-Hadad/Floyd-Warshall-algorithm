@@ -10,6 +10,10 @@ int min(int a,int b){
          return b;
         }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fd321929d5beb816c3fb5aef0ac7c725b1a45f19
 
 void shortestPath_mat(){
         for(int u=0;u<10;u++){
@@ -18,17 +22,20 @@ void shortestPath_mat(){
                     if(mat[v][k]!=0 && mat[v][u]!=0 && mat[u][k]!=0){
                         mat[v][k]=min(mat[v][k],mat[v][u]+mat[u][k]);
                     }
-                    if(v!=k&&mat[v][k]==0 && mat[v][u]!=0 && mat[u][k]!=0){
+                    if(v!=k && mat[v][k]==0 && mat[v][u]!=0 && mat[u][k]!=0){
                            mat[v][k]=mat[v][u]+mat[u][k];
-                    }
+                }
             
             }
         }
     }
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> fd321929d5beb816c3fb5aef0ac7c725b1a45f19
 void funcA(){
     for (int i = 0; i < 10; i++){
         for (int j = 0; j < 10; j++)
