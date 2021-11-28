@@ -15,7 +15,6 @@ void shortestPath_mat(){
                 }
             }
         }
-    }
 }
 
 int min(int a,int b){
