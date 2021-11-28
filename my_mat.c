@@ -5,15 +5,12 @@ int mat[10][10];
 
 int min(int a,int b){
     if (a>b) {
-        return a;}
+        return b;}
     else {
-         return b;
+         return a;
         }
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> fd321929d5beb816c3fb5aef0ac7c725b1a45f19
 
 void shortestPath_mat(){
         for(int u=0;u<10;u++){
@@ -31,11 +28,6 @@ void shortestPath_mat(){
     }
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> fd321929d5beb816c3fb5aef0ac7c725b1a45f19
 void funcA(){
     for (int i = 0; i < 10; i++){
         for (int j = 0; j < 10; j++)
@@ -51,7 +43,7 @@ void funcA(){
 void funcB(){
     int i , j;
     scanf("%d %d",&i,&j);
-    if(mat[i][j]!>0){
+    if(mat[i][j]!=0){
         printf("True\n");
     }
     else 
