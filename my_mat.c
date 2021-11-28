@@ -3,6 +3,14 @@
 
 int mat[10][10];
 
+int min(int a,int b){
+    if (a>b) {
+        return a;}
+    else {
+         return b;
+        }
+    }
+
 
 void shortestPath_mat(){
         for(int u=0;u<10;u++){
@@ -11,23 +19,14 @@ void shortestPath_mat(){
                     if(mat[v][k]!=0 && mat[v][u]!=0 && mat[u][k]!=0){
                         mat[v][k]=min(mat[v][k],mat[v][u]+mat[u][k]);
                     }
-                    if(v!=k&&mat[v][k]==0 && mat[v][u]!=0 && mat[u][k]!=0){
+                    if(v!=k && mat[v][k]==0 && mat[v][u]!=0 && mat[u][k]!=0){
                            mat[v][k]=mat[v][u]+mat[u][k];
-                    }
+                }
             
             }
         }
     }
 }
-
-
-int min(int a,int b){
-    if (a>b) {
-        return a;}
-    else {
-         return b;
-        }
-    }
 
 void funcA(){
     for (int i = 0; i < 10; i++){
