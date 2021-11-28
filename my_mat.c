@@ -10,7 +10,7 @@ void shortestPath_mat(){
                 for(int k=0;k<10;k++){
                     if(mat[v][k]!=0 && mat[v][u]!=0 && mat[u][k]!=0){
                         mat[v][k]=min(mat[v][k],mat[v][u]+mat[u][k]);
-                        if(v!=k&&mat[v][k]==0&&mat[v][u]!=0&&mat[u][k]!=0)
+                        if(v!=k)
                            mat[v][k]=mat[v][u]+mat[u][k];
                 }
             }
